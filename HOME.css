@@ -1,0 +1,304 @@
+:root{
+    --primarycolor: chocolate;
+    --secondarycolor: #1B1931;
+    --lighting-color: #ffffff ;
+    --bgcolor-1:#171a1c;
+    --bgcolor-2:#22282a;
+    --padding:8%;
+    --lighting-color: #ffffff ;
+    --bgcolor-3:antiquewhite;
+
+}
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Cairo", sans-serif;
+    font-size: 16px;
+    color: var(--lighting-color);
+}
+
+.home {
+    background-color: var(--lighting-color);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .home {
+    background-color: var(--bgcolor-1);
+}
+
+nav{
+    padding-top: 2.8rem;
+    padding-left: 5rem var(--padding);
+    padding-right: 4rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+ }
+
+ ul {
+    background-color: var(--primarycolor);
+    margin-left: 30px;
+    border-radius: 30px;
+ }
+
+ nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+
+ nav ul li a{
+    color: var(--lighting-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.image {
+    width: 167px;
+    height: 56px;
+    margin-left: 300px;
+    content: url(img/1-removebg-preview.png);
+}
+
+.dark-mode .image{
+    width:167px;
+    height: 56px;
+    margin-left: 300px;
+    content: url(img/Screenshot_2024-10-25_082929-removebg-preview.png);
+    }
+
+
+.dark-mode nav ul li a{
+    color: var(--lighting-color) ;
+}
+
+ nav ul li a:hover{
+    color: var(--bgcolor-1);
+}
+
+ h1{
+    font-size: 4.65rem;
+    margin: 1.7rem;
+    color: var(--bgcolor-1);
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    color:var(--bgcolor-1);
+}
+
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--bgcolor-1);
+}
+
+h5{
+font-size: 1.37rem;
+margin-bottom: 1.5rem;
+letter-spacing: 2px;
+}
+
+span{
+    color: var(--primarycolor);
+ }
+
+p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.dark-mode h1, h4, h5, p {
+    color:var(--lighting-color);
+}
+
+.dark-mode h3 {
+    color: var(--lighting-color);
+}
+
+.home .social{
+    margin-top: 3.4rem;
+}
+
+.home .social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+
+.home .social img:hover{
+    transform: scale(1.2);
+}
+
+.home .container-images{
+    width: 45%;
+    height: 90%;
+    position: relative;
+}
+
+.home .container-images img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform:translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.home .container-images:hover .shape{
+    bottom: 40px;
+}
+
+.home .container-images:hover .pic{
+    left: 45%;
+}
+
+
+.about{
+    background-color: var(--bgcolor-2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .container-images{
+    width: 35%;
+}
+
+.about .container-images img{
+    width: 90%;
+}
+
+.about .container-text {
+    width: 35%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn{
+    background-color: var(--primarycolor);
+    color: var(--lighting-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--primarycolor);
+}
+
+
+/* الزر الرئيسي */
+#toggle-dark-mode {
+    background-color: var(--bgcolor-2); /* اللون الخلفي للزر */
+    border: 2px solid var(--primarycolor); /* حدود الزر */
+    border-radius: 50%; /* دائري الشكل */
+    cursor: pointer;
+    font-size: 1.5rem; /* حجم الأيقونة */
+    color: var(--primarycolor); /* لون الأيقونة */
+    width: 40px; /* عرض الزر */
+    height: 40px; /* ارتفاع الزر */
+    margin-right: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل الزر */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* التأثير عند التمرير */
+#toggle-dark-mode:hover {
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+    background-color: var(--primarycolor); /* تغيير الخلفية */
+    color: var(--lighting-color); /* تغيير لون الأيقونة */
+    opacity: 0.9; /* تقليل الشفافية */
+}
+
+/* التأثير عند الضغط */
+#toggle-dark-mode:active {
+    transform: scale(0.9); /* تصغير الزر قليلاً */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل الظل */
+}
+
+#toggle-dark-mode i {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dark-mode #toggle-dark-mode i {
+    transform: rotate(180deg); /* دوران الأيقونة */
+    opacity: 0.8; /* تقليل الشفافية */
+}
+
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}

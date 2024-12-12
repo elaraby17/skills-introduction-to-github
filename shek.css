@@ -1,0 +1,360 @@
+:root{
+    --primarycolor: chocolate;
+    --secondarycolor: #ff274b;
+    --lighting-color: #ffffff ;
+    --bgcolor-1:#171a1c;
+    --bgcolor-2:#22282a;
+    --padding:8%;
+}
+
+.dark-mode :root{
+    --primarycolor: chocolate;
+    --secondarycolor: #ff274b;
+    --lighting-color: #ffffff ;
+    --bgcolor-1:antiquewhite;
+    --bgcolor-2:white;
+    --padding:8%;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Josefin Sans", sans-serif;
+    font-family: "Cairo", sans-serif;
+    font-size: 16px;
+    color: var(--lighting-color);
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode a:hover {
+    color: black; /* لون جديد عند التمرير في الوضع الداكن */
+}
+
+.dark-mode nav {
+    background-color:var(--lighting-color) ;
+}
+
+
+nav {
+    padding-top: 2.8rem;
+    padding-left: 5rem var(--padding);
+    padding-right: 4rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--bgcolor-1);
+}
+
+nav button {
+    margin-right:50px ;
+}
+nav img {
+    width: 168px;
+    height: 56px;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgcolor-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.dark-mode .home {
+    background-color: var(--lighting-color);
+}
+
+
+.image {
+    width: 167px;
+    height: 56px;
+   
+    content: url(img/Screenshot_2024-10-25_082929-removebg-preview.png);
+}
+
+.dark-mode .image{
+    width:167px;
+    height: 56px;
+    content: url(img/1-removebg-preview.png);
+    }
+
+
+ .one {
+   margin-left: 22%;
+ }
+
+ span{
+    color: var(--primarycolor);
+ }
+
+h1{
+    font-size: 4.65rem;
+    margin: 1.7rem;
+    color: var(--lighting-color);
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.dark-mode h1 {
+    color: var(--bgcolor-1);
+}
+
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondarycolor);
+}
+
+h5{
+font-size: 1.37rem;
+margin-bottom: 1.5rem;
+letter-spacing: 2px;
+}
+
+p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+section{
+    background-color: #22282a;
+}
+
+.dark-mode section {
+    background-color: var(--lighting-color);
+}
+
+details summary{
+    position: relative;
+    display: flex;
+}
+
+.summary{
+    text-align: center;
+    background-color: var(--bgcolor-2);
+    padding: 2rem var(--padding);
+    justify-content: space-between;
+    transition: 1s ease;
+}
+
+.dark-mode .summary {
+    background-color: var(--lighting-color);
+}
+
+.summary:hover{
+    transform: scale(0.9);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card { 
+    background-color: aliceblue;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7S ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icons {
+    color: chocolate;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+
+.info h3 {
+    color: chocolate
+    ;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: var(--bgcolor-1);
+}
+
+.projects .content {
+    margin-top: 30PX;
+}
+
+.project-card {
+    background-color: aliceblue;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-imge{
+    opacity: 0.9;
+   
+}
+
+.project-imge img {
+    width: 100%;
+}
+.project-info {
+    padding: 1em;
+
+}
+.project-category {
+    font-size: 0.8em;
+    color: black;
+
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+
+}
+
+.more-details {
+    text-decoration: none;
+    color: chocolate;
+
+}
+.more-details:hover {
+    color: peru;
+}
+
+.footer {
+    background-color: var(--bgcolor-1);
+    height: 190px;
+}
+
+.footer .mh-img img {
+width: 150px;
+height: 150px;
+margin-left: 45%;
+}
+
+.dark-mode .footer {
+    background-color: antiquewhite;
+}
+
+/* الزر الرئيسي */
+#toggle-dark-mode {
+    background-color: var(--bgcolor-2); /* اللون الخلفي للزر */
+    border: 2px solid var(--primarycolor); /* حدود الزر */
+    border-radius: 50%; /* دائري الشكل */
+    cursor: pointer;
+    font-size: 1.5rem; /* حجم الأيقونة */
+    color: var(--primarycolor); /* لون الأيقونة */
+    width: 50px; /* عرض الزر */
+    height: 50px; /* ارتفاع الزر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل الزر */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* التأثير عند التمرير */
+#toggle-dark-mode:hover {
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+    background-color: var(--primarycolor); /* تغيير الخلفية */
+    color: var(--lighting-color); /* تغيير لون الأيقونة */
+    opacity: 0.9; /* تقليل الشفافية */
+}
+
+/* التأثير عند الضغط */
+#toggle-dark-mode:active {
+    transform: scale(0.9); /* تصغير الزر قليلاً */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل الظل */
+}
+
+#toggle-dark-mode i {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dark-mode #toggle-dark-mode i {
+    transform: rotate(180deg); /* دوران الأيقونة */
+    opacity: 0.8; /* تقليل الشفافية */
+}
+
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
